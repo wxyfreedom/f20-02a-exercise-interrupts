@@ -6,6 +6,8 @@
 #ifndef FAUX_S_H
 #define FAUX_S_H
 
+#include <errno.h>
+
 #define NINTERRUPTS 2
 
 /* Our interrupt vector */
@@ -39,7 +41,7 @@ struct faux_s_device {
 };
 
 int faux_s_interrupt_set(int vect_offset, isr_fn_t fn);
-void faux_s_interrupt_trigger(int vect_offset);
+int faux_s_interrupt_trigger(int vect_offset);
 void faux_s_interrupt_init(void);
 int faux_s_interrupt_hook_up(struct faux_s_device *d, int vect_offset);
 

@@ -53,14 +53,14 @@ Please answer the following questions:
 - **Q2:** What happens when you run the system using interrupts?
 - **Q3:** How can you explain the difference?
 	Please be specific.
-- **Q4:** Use the meme device in interrupt mode to get an expectation of what execution should look like.
-	Now run it in polling mode.
-	Please explain what is happening.
-- **Q5:** A famous google interview question: How can you tell by which way a stack grows in C on your architecture?
+- **Q4:** A famous google interview question: How can you tell by which way a stack grows in C on your architecture?
 	Brainstorm this as a group and test it out.
 	Use what you learned from that exercise to figure out which stack the interrupt handler `dev_isr` is executing on.
 	Explain what you think is happening, and how that is possible?
 	In other words: how are stacks used with signals in Linux?
+- **Q5:** Use the meme device both modes.
+	What is happening here?
+	What solutions do you foresee?
 
 ## Exercises: DMA
 

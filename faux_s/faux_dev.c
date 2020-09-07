@@ -172,9 +172,7 @@ faux_s_dev_process(void)
 		if (d->status == DMA_STATUS_RECEIVING) {
 			faux_s_dev_dma_populate(d, m, strlen(m) + 1);
 		}
-		if (d->vector_offset != -1) {
-			faux_s_interrupt_trigger(d->vector_offset);
-		}
+		faux_s_interrupt_trigger(d->vector_offset);
 	}
 
 	if ((boops_per_minute > 0) &&
@@ -183,9 +181,7 @@ faux_s_dev_process(void)
 		struct faux_s_device *d = &devs[FAUX_S_DEV_BOOP];
 
 		nboops++;
-		if (d->vector_offset != -1) {
-			faux_s_interrupt_trigger(d->vector_offset);
-		}
+		faux_s_interrupt_trigger(d->vector_offset);
 	}
 
 	return;
