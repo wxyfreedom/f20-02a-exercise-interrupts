@@ -2,7 +2,7 @@
 # https://github.com/gwu-cs-os/evening_os_hour/tree/master/f19/10.2-makefiles
 # and watch the video @ https://www.youtube.com/watch?v=DtGrdB8wQ_8
 
-BINARY=faux_s
+BINARY=bin
 CODEDIRS=. faux_s
 INCDIRS=. faux_s/
 
