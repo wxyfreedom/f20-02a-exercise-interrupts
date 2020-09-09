@@ -5,8 +5,9 @@
 #include <faux_s.h>
 
 /**
- * From the "OS": enqueue a buffer where none is present.
- * Add a new buffer for the device to transfer into.
+ * From the "OS": enqueue a buffer where none is present.  Add a new
+ * buffer for the device to transfer into.  Note that there is only a
+ * *single* buffer in this DMA "ring".
  *
  * - @d - the device
  * - @buf - The buffer (of size `FAUX_S_DMA_BUF_SZ`) for the device to

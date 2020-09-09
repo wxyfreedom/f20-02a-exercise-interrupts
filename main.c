@@ -64,7 +64,7 @@ main(void)
 #endif
 	/* 60 boops/memes per minute sounds about right */
 	if (faux_s_dev_reg_write(dev, 60)) {
-		printf("Register write failure.\n");
+ 		printf("Register write failure.\n");
 		exit(EXIT_FAILURE);
 	}
 

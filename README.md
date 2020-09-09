@@ -66,7 +66,21 @@ Please answer the following questions:
 
 ## Exercises: DMA
 
-TBD
+Now lets hack in some DMA!
+
+- **Q1:** Only the meme device provides DMA.
+	Why?
+	Why does DMA make more sense for the meme device?
+- **Q2:** Not so much a question as a puzzle:
+	Implement the `main.c` code to use the DMA features of the meme device!
+	Note that there is a lot of documentation of the DMA functions.
+- **Q3:** Why does DMA have such an impact here?
+	The constant `WORK_AMNT` in `faux_dev.c` changes the simulated latency of the interconnect used to "talk" to the device.
+	How does changing `WORK_AMNT` impact the effectiveness of DMA?
+	What does this mean for non-simulated systems?
+- **Q4:** Does your implementation pass `valgrind`^[Note, you might need to `apt-get install valgrind`]?
+	Valgrind is a tool that helps you debug your C.
+	It detects errors in using `malloc` and `free`; double freeing a piece of memory? not freeing memory?
 
 ## A Note on `gdb`
 
