@@ -3,8 +3,8 @@
  * device, and if we use register I/O, or interrupt I/O. The mode
  * changes based on if you comment each line out or not.
  */
-#define BOOPDEV
-#define POLL_IO
+//#define BOOPDEV
+//#define POLL_IO
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,6 +51,8 @@ main(void)
 	faux_s_dev_init();
 
 	/* set the interrupt vector entry 0 to our isr handler! */
+	//int localVar = 1;
+	//printf("1st output: %p", &localVar);
 	faux_s_interrupt_set(0, dev_isr);
 	/* Create the device */
 	dev = faux_s_dev_create(DEV_ID);

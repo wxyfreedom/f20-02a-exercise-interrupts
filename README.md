@@ -52,14 +52,34 @@ You should be able to get by mostly only knowing the code in `main.c`.
 Please answer the following questions:
 
 - **Q1:** What happens when you run the system using polling?
+
+The CPU does less 'useful work' in the same amount of time in comparison to interrupt driven I/O.
+
 - **Q2:** What happens when you run the system using interrupts?
+
+The CPU does more 'useful work' in the same amount of time in comparison to polling.
+
 - **Q3:** How can you explain the difference?
-	Please be specific.
+
+When polling, the CPU has to constantly check if there is device data ready to be processed which takes up CPU cycles, but when using interrupts, the CPU is alerted when the device is ready to be used.
+
 - **Q4:** A famous google interview question: How can you tell by which way a stack grows in C on your architecture?
 	Brainstorm this as a group and test it out.
+
+One of the ways to tell which way a stack grows is to print the addresses of two local variables in the function call to see whether the stack grows upwards or downwards on the architecture by the difference between the addresses. 
+
 	Use what you learned from that exercise to figure out which stack the interrupt handler `dev_isr` is executing on.
+
+The interrupt handler `dev_isr` is executing on the User Stack since it is a regular funtion rather then a system call.
+
 	Explain what you think is happening, and how that is possible?
+
+`dev_isr` is still operating on the User Stack since it is a normally defined function, not a system call.
+
 	In other words: how are stacks used with signals in Linux?
+
+A regularly defined function will have a stack on user level.  A signal for a system call would cause a stack on kernel level to be created.
+
 - **Q5:** Use the meme device both modes.
 	What is happening here?
 	What solutions do you foresee?
